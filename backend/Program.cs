@@ -52,6 +52,21 @@ app.MapGet("/api/missions", async (MissionControlDbContext db) =>
     return Results.Ok(missions);
 });
 
+// Get a mission by ID
+app.MapGet("/api/missions/{id}", async (
+    int id,
+    MissionControlDbContext db) =>
+{
+    var mission = await db.Missions.FindAsync(id);
+
+    if (mission is null)
+    {
+        return Results.NotFound();
+    }
+
+    return Results.Ok(mission);
+});
+
 // Create a mission
 app.MapPost("/api/missions", async (
     Mission mission,
@@ -65,6 +80,51 @@ app.MapPost("/api/missions", async (
         $"/api/missions/{mission.Id}",
         mission
     );
+});
+
+// Delete a mission
+app.MapDelete("/api/missions/{id}", async (
+    int id,
+    MissionControlDbContext db) =>
+{
+    var mission = await db.Missions.FindAsync(id);
+
+    if (mission is null)
+    {
+        return Results.NotFound();
+    }
+
+    db.Missions.Remove(mission);
+
+    await db.SaveChangesAsync();
+
+    return Results.NoContent();
+});
+
+
+// Update a mission
+app.MapPut("/api/missions/{id}", async (
+    int id,
+    Mission updatedMission,
+    MissionControlDbContext db) =>
+{
+    var mission = await db.Missions.FindAsync(id);
+
+    if (mission is null)
+    {
+        return Results.NotFound();
+    }
+
+    mission.Name = updatedMission.Name;
+    mission.Description = updatedMission.Description;
+    mission.Status = updatedMission.Status;
+    mission.Priority = updatedMission.Priority;
+    mission.StartDate = updatedMission.StartDate;
+    mission.TargetDate = updatedMission.TargetDate;
+
+    await db.SaveChangesAsync();
+
+    return Results.Ok(mission);
 });
 
 app.Run();
