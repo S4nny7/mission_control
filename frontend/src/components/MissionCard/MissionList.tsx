@@ -5,9 +5,10 @@ interface MissionListProps {
   missions: Mission[];
   loading: boolean;
   error: string | null;
+  onDelete: (id: number) => void;
 }
 
-function MissionList({ missions, loading, error }: MissionListProps) {
+function MissionList({ missions, loading, error, onDelete }: MissionListProps) {
   if (loading) return <p className="loading">Loading mission data...</p>;
 
   if (error) {
@@ -22,7 +23,7 @@ function MissionList({ missions, loading, error }: MissionListProps) {
   return (
     <div className="missions">
       {missions.map((mission) => (
-        <MissionCard key={mission.id} mission={mission} />
+        <MissionCard key={mission.id} mission={mission} onDelete={onDelete} />
       ))}
     </div>
   );

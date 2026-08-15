@@ -171,6 +171,40 @@ body {
 }
 
 
+/* DELETE MISSION */
+.mission-delete-btn {
+  margin-top: 15px;
+
+  width: 100%;
+
+  padding: 8px 14px;
+
+  background: rgba(217, 113, 248, 0.1);
+
+  border: 1px solid rgba(199, 113, 248, 0.4);
+
+  border-radius: 8px;
+
+  color: #e0a5fc;
+
+  font-family: inherit;
+
+  font-size: 0.85rem;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.mission-delete-btn:hover {
+  background: rgba(205, 113, 248, 0.25);
+
+  border-color: rgba(199, 113, 248, 0.7);
+}
+
+
 /* Hover effect */
 
 .mission-card:hover {
@@ -198,6 +232,34 @@ body {
   gap: 15px;
 
   margin-bottom: 15px;
+}
+
+.mission-header h1 {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin: 0 0 10px;
+
+  color: #ffffff;
+
+  font-size: 2.5rem;
+
+  text-shadow:
+    0 0 10px rgba(125, 211, 252, 0.5);
+}
+
+.header-icon {
+  width: 1.6em;
+
+  height: 1.6em;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(0 0 8px rgba(125, 211, 252, 0.5));
 }
 
 .mission-card h3 {

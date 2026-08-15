@@ -2,9 +2,10 @@ import type { Mission } from "../../types/Mission";
 
 interface MissionCardProps {
   mission: Mission;
+  onDelete: (id: number) => void;
 }
 
-function MissionCard({ mission }: MissionCardProps) {
+function MissionCard({ mission, onDelete }: MissionCardProps) {
   return (
     <article className="mission-card">
       <div className="mission-card-header">
@@ -45,6 +46,14 @@ function MissionCard({ mission }: MissionCardProps) {
           </div>
         )}
       </div>
+
+      <button
+        className="mission-delete-btn"
+        onClick={() => onDelete(mission.id)}
+        aria-label={`Delete ${mission.name}`}
+      >
+        Abort Mission
+      </button>
     </article>
   );
 }
