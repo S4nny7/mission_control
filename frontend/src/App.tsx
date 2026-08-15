@@ -3,7 +3,7 @@ import MissionHeader from "./components/MissionHeader/MissionHeader";
 import MissionForm from "./components/MissionForm/MissionForm";
 import MissionList from "./components/MissionCard/MissionList";
 import { useMissions } from "./hooks/useMissions";
-import LoadingScreen from "./components/LoadingScreen/LoadingScreen";
+import LoadingScreen from "./pages/LoadingScreen/LoadingScreen";
 import { useState, useEffect } from "react";
 import "./App.css";
 

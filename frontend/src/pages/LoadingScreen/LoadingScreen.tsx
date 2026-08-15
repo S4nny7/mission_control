@@ -1,4 +1,4 @@
-import Galaxy from "../Galaxy/Galaxy";
+import Galaxy from "../../components/Galaxy/Galaxy";
 import planetLoader from "../../assets/planet_loader.gif";
 import "./LoadingScreen.css";
 
