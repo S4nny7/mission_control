@@ -5,12 +5,14 @@ import MissionList from "./components/MissionCard/MissionList";
 import { useMissions } from "./hooks/useMissions";
 import LoadingScreen from "./pages/LoadingScreen/LoadingScreen";
 import { useState, useEffect } from "react";
+import WelcomeScreen from "./pages/WelcomeScreen/WelcomeScreen";
 import "./App.css";
 
 const SPLASH_DURATION_MS = 4000;
 
 function App() {
   const [showSplash, setShowSplash] = useState(true);
+  const [showWelcome, setShowWelcome] = useState(true);
   const { missions, loading, error, createMission, deleteMission } =
     useMissions();
 
@@ -21,6 +23,10 @@ function App() {
 
   if (showSplash) {
     return <LoadingScreen />;
+  }
+
+  if (showWelcome) {
+    return <WelcomeScreen onNext={() => setShowWelcome(false)} />;
   }
 
   return (

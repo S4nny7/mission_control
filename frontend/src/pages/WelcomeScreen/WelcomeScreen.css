@@ -1,0 +1,192 @@
+.welcome-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  background: #000;
+}
+
+.welcome-content {
+  position: relative;
+  z-index: 10;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  max-width: clamp(30rem, 45vw, 60rem);
+
+  padding: 0 1rem;
+
+  text-align: center;
+
+  transform: translateY(-3rem);
+}
+
+
+/* =========================
+   SPEECH BUBBLE (image-based)
+========================= */
+
+.speech-bubble {
+  position: relative;
+  top: clamp(11rem, 14vw, 18rem);
+  left: clamp(12rem, 15vw, 20rem);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-width: clamp(29rem, 34vw, 42rem);
+  aspect-ratio: 1 / 0.85;
+
+  margin-bottom: 1rem;
+  padding: clamp(1.5rem, 2vw, 2.5rem) clamp(3rem, 4vw, 4.5rem)
+    clamp(3.5rem, 4.5vw, 5rem);
+
+  background-image: var(--speech-bubble-img);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  image-rendering: pixelated;
+
+  box-sizing: border-box;
+
+  transition: transform 0.2s ease;
+}
+
+.speech-bubble:hover {
+  transform: scale(1.06);
+  
+}
+
+.speech-bubble-text {
+  color: #0e0847;
+  font-weight: 700;
+  font-size: clamp(1.6rem, 2vw, 2.4rem);
+  line-height: 1.4;
+  font-style: italic;
+}
+
+
+/* =========================
+   ASTROCAT
+========================= */
+
+.astrocat-wrapper {
+  display: inline-block;
+
+  margin: 0 0 1.5rem;
+
+  transition: transform 0.2s ease;
+}
+
+.astrocat-wrapper:hover {
+  transform: scale(1.08);
+  cursor: pointer;
+}
+
+.astrocat-float {
+  width: clamp(37rem, 43vw, 55rem);
+  height: clamp(37rem, 43vw, 55rem);
+
+  margin: 0;
+
+  object-fit: contain;
+
+  image-rendering: pixelated;
+
+  filter:
+    drop-shadow(0 0 1.25rem rgba(125, 211, 252, 0.5));
+
+  animation: astrocat-float 3s ease-in-out infinite;
+}
+
+@keyframes astrocat-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1.1rem);
+  }
+}
+
+
+/* =========================
+   PIXEL BUTTON
+========================= */
+
+.pixel-btn {
+  padding: clamp(0.75rem, 1vw, 1.1rem) clamp(2.5rem, 3vw, 3.75rem);
+  position: relative;
+  bottom: clamp(8rem, 10vw, 10rem);
+
+  background: #7fcf9d;
+
+  border: none;
+  border-radius: 999px;
+
+  color: #0e0847;
+
+  font-family: inherit;
+  font-size: clamp(1rem, 1.2vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 0.25rem 0 0 rgba(0, 0, 0, 0.25),
+    0 0 1.25rem rgba(74, 222, 128, 0.4);
+
+  transition:
+    transform 0.1s ease,
+    box-shadow 0.1s ease;
+}
+
+.pixel-btn:hover {
+  background: #55f391;
+  transform: scale(1.08);
+  cursor: pointer;
+}
+
+.pixel-btn:active {
+  transform: scale(1.08) translateY(0.2rem);
+
+  box-shadow:
+    0 0.05rem 0 0 rgba(0, 0, 0, 0.25),
+    0 0 0.75rem rgba(74, 222, 128, 0.3);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 37.5rem) {
+  .astrocat-float {
+    width: 13rem;
+    height: 13rem;
+  }
+
+  .speech-bubble {
+    max-width: 20rem;
+    padding: 1rem 2.25rem 2.75rem;
+  }
+
+  .speech-bubble-text {
+    font-size: 0.62rem;
+  }
+}
