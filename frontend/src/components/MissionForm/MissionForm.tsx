@@ -1,5 +1,9 @@
 import { useState } from "react";
 import "./MissionForm.css";
+import Dropdown from "../Dropdown/Dropdown";
+
+const MIN_DATE = "1900-01-01";
+const MAX_DATE = "2099-12-31";
 
 export interface MissionFormData {
   name: string;
@@ -189,6 +193,8 @@ function MissionForm({
             id="mission-start-date"
             type="date"
             value={startDate}
+            min={MIN_DATE}
+            max={MAX_DATE}
             onChange={(event) => setStartDate(event.target.value)}
             disabled={submitting}
           />
@@ -201,6 +207,8 @@ function MissionForm({
             id="mission-target-date"
             type="date"
             value={targetDate}
+            min={MIN_DATE}
+            max={MAX_DATE}
             onChange={(event) => setTargetDate(event.target.value)}
             disabled={submitting}
           />

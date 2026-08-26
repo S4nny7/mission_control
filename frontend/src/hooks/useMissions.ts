@@ -59,7 +59,22 @@ export function useMissions() {
         setMissions((current) => current.filter((mission) => mission.id !== id));
         }
 
-  return { missions, loading, error, createMission, deleteMission };
+  async function updateMissionStatus(id: number, status:  Mission["status"]) {
+    const mission = missions.find((m) => m.id == id);
+    if (!mission) return;
+
+    const response  = await fetch(`${API_URL}/api/missions/${id}`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json"},
+      body: JSON.stringify({...mission, status}),
+    
+  });
+  if (!response.ok) throw new Error(`API returned ${response.status}`);
+  const updatedMission: Mission = await response.json();
+  setMissions((current) =>
+  current.map((m) => (m.id === id ? updatedMission : m))
+);
 }
 
-
+return { missions, loading, error, createMission, deleteMission, updateMissionStatus };
+}

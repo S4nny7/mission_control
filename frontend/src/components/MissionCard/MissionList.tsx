@@ -6,9 +6,16 @@ interface MissionListProps {
   loading: boolean;
   error: string | null;
   onDelete: (id: number) => void;
+  onStatusChange: (id: number, status: Mission["status"]) => void;
 }
 
-function MissionList({ missions, loading, error, onDelete }: MissionListProps) {
+function MissionList({
+  missions,
+  loading,
+  error,
+  onDelete,
+  onStatusChange,
+}: MissionListProps) {
   if (loading) return <p className="loading">Loading mission data...</p>;
 
   if (error) {
@@ -23,7 +30,12 @@ function MissionList({ missions, loading, error, onDelete }: MissionListProps) {
   return (
     <div className="missions">
       {missions.map((mission) => (
-        <MissionCard key={mission.id} mission={mission} onDelete={onDelete} />
+        <MissionCard
+          key={mission.id}
+          mission={mission}
+          onDelete={onDelete}
+          onStatusChange={onStatusChange}
+        />
       ))}
     </div>
   );

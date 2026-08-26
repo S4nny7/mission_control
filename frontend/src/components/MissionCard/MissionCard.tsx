@@ -1,11 +1,20 @@
 import type { Mission } from "../../types/Mission";
+import Dropdown from "../Dropdown/Dropdown";
 
 interface MissionCardProps {
   mission: Mission;
   onDelete: (id: number) => void;
+  onStatusChange: (id: number, status: Mission["status"]) => void;
 }
 
-function MissionCard({ mission, onDelete }: MissionCardProps) {
+const STATUSES: Mission["status"][] = [
+  "Mission Queued",
+  "In Orbit",
+  "Mission Completed",
+  "Mission Aborted",
+];
+
+function MissionCard({ mission, onDelete, onStatusChange }: MissionCardProps) {
   return (
     <article className="mission-card">
       <div className="mission-card-header">
@@ -25,7 +34,11 @@ function MissionCard({ mission, onDelete }: MissionCardProps) {
 
         <div>
           <span className="label">Status</span>
-          <span className="value">{mission.status}</span>
+          <Dropdown
+            value={mission.status}
+            options={STATUSES}
+            onChange={(status) => onStatusChange(mission.id, status)}
+          />
         </div>
 
         {mission.startDate && (
@@ -52,7 +65,7 @@ function MissionCard({ mission, onDelete }: MissionCardProps) {
         onClick={() => onDelete(mission.id)}
         aria-label={`Delete ${mission.name}`}
       >
-        Abort Mission
+        🗑️ Abort Mission
       </button>
     </article>
   );

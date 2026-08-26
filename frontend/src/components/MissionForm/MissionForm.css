@@ -192,3 +192,8 @@
     gap: 0;
   }
 }
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(80%) sepia(20%) saturate(1000%) hue-rotate(170deg);
+  cursor: pointer;
+}
