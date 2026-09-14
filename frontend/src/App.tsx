@@ -12,6 +12,9 @@ import LoadingScreen from "./pages/LoadingScreen/LoadingScreen";
 import WelcomeScreen from "./pages/WelcomeScreen/WelcomeScreen";
 import Dashboard from "./pages/Dashboard/Dashboard";
 
+import GoBackButton from "./components/GoBack/GoBackButton";
+import "./components/GoBack/GoBackButton.css";
+
 import "./App.css";
 
 const SPLASH_DURATION_MS = 4000;
@@ -77,6 +80,7 @@ function App() {
           path="/missions/new"
           element={
             <main className="mission-control">
+              <GoBackButton fallbackPath="/" />
               <MissionHeader isOperational={!error} />
 
               <section className="mission-form-section">

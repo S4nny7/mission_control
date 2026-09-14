@@ -7,10 +7,6 @@ interface DashboardProps {
 }
 
 function Dashboard({ missions, onLaunchMission }: DashboardProps) {
-  // =========================
-  // MISSION STATISTICS
-  // =========================
-
   const totalMissions = missions.length;
 
   const activeMissions = missions.filter(

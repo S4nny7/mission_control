@@ -37,9 +37,9 @@
 
   gap: 30px;
 
-  background: rgba(0, 0, 0, 0.72);
+  background: rgba(10, 16, 28, 0.8);
 
-  border: 1px solid rgba(125, 211, 252, 0.4);
+  border: 1px solid rgba(125, 211, 252, 0.5);
 
   border-radius: 14px;
 
@@ -72,11 +72,11 @@
 
   font-size: 2rem;
 
-  border: 1px solid rgba(125, 211, 252, 0.4);
+  border: 1px solid rgba(125, 211, 252, 0.5);
 
   border-radius: 12px;
 
-  background: rgba(3, 15, 30, 0.8);
+  background: rgba(10, 25, 45, 0.85);
 
   box-shadow:
     0 0 20px rgba(0, 140, 255, 0.15);
@@ -86,7 +86,7 @@
 .dashboard-eyebrow {
   margin: 0 0 5px;
 
-  color: #64748b;
+  color: #a8b8cc;
 
   font-family: monospace;
 
@@ -111,7 +111,7 @@
 .dashboard-subtitle {
   margin: 6px 0 0;
 
-  color: #94a3b8;
+  color: #b8c5d6;
 
   font-size: 0.9rem;
 }
@@ -124,12 +124,12 @@
 .launch-button {
   padding: 14px 24px;
 
-  border: 1px solid rgba(125, 211, 252, 0.6);
+  border: 1px solid rgba(125, 211, 252, 0.7);
 
   border-radius: 8px;
 
   background:
-    rgba(8, 72, 100, 0.65);
+    rgba(14, 95, 130, 0.75);
 
   color: #ffffff;
 
@@ -156,7 +156,7 @@
   transform: translateY(-2px);
 
   background:
-    rgba(8, 100, 140, 0.75);
+    rgba(14, 120, 165, 0.85);
 
   border-color:
     rgba(125, 211, 252, 0.95);
@@ -183,7 +183,7 @@
 
   gap: 12px;
 
-  color: #64748b;
+  color: #94a3b8;
 
   font-family: monospace;
 
@@ -221,7 +221,7 @@
 
 
 .status-divider {
-  color: #334155;
+  color: #64748b;
 }
 
 
@@ -253,9 +253,9 @@
   box-sizing: border-box;
 
   background:
-    rgba(3, 8, 18, 0.88);
+    rgba(10, 18, 32, 0.92);
 
-  border: 1px solid rgba(125, 211, 252, 0.25);
+  border: 1px solid rgba(125, 211, 252, 0.4);
 
   border-radius: 12px;
 
@@ -274,10 +274,10 @@
   transform: translateY(-3px);
 
   border-color:
-    rgba(125, 211, 252, 0.6);
+    rgba(125, 211, 252, 0.75);
 
   box-shadow:
-    0 0 25px rgba(0, 100, 255, 0.15);
+    0 0 25px rgba(0, 100, 255, 0.2);
 }
 
 
@@ -291,7 +291,7 @@
 
 
 .stat-label {
-  color: #64748b;
+  color: #93a4bd;
 
   font-family: monospace;
 
@@ -324,7 +324,7 @@
 .stat-description {
   margin-top: 10px;
 
-  color: #64748b;
+  color: #93a4bd;
 
   font-size: 0.75rem;
 }
@@ -334,7 +334,7 @@
 
 .active-card {
   border-color:
-    rgba(74, 222, 128, 0.25);
+    rgba(74, 222, 128, 0.4);
 }
 
 
@@ -345,7 +345,7 @@
 
 .completed-card {
   border-color:
-    rgba(125, 211, 252, 0.25);
+    rgba(125, 211, 252, 0.4);
 }
 
 
@@ -356,7 +356,7 @@
 
 .overdue-card {
   border-color:
-    rgba(248, 113, 113, 0.3);
+    rgba(248, 113, 113, 0.45);
 }
 
 
@@ -367,7 +367,7 @@
 
 .priority-card {
   border-color:
-    rgba(192, 132, 252, 0.3);
+    rgba(192, 132, 252, 0.45);
 }
 
 
@@ -402,17 +402,17 @@
   padding: 24px;
 
   background:
-    rgba(0, 0, 0, 0.7);
+    rgba(8, 14, 26, 0.82);
 
   border:
-    1px solid rgba(125, 211, 252, 0.25);
+    1px solid rgba(125, 211, 252, 0.4);
 
   border-radius: 12px;
 
   backdrop-filter: blur(8px);
 
   box-shadow:
-    0 0 25px rgba(0, 100, 255, 0.08);
+    0 0 25px rgba(0, 100, 255, 0.1);
 }
 
 
@@ -428,7 +428,7 @@
 
 
 .panel-eyebrow {
-  color: #64748b;
+  color: #93a4bd;
 
   font-family: monospace;
 
@@ -448,7 +448,7 @@
 
 
 .panel-code {
-  color: #475569;
+  color: #7c8ba3;
 
   font-family: monospace;
 
@@ -479,10 +479,10 @@
   padding: 12px 14px;
 
   background:
-    rgba(15, 23, 42, 0.55);
+    rgba(30, 41, 59, 0.65);
 
   border:
-    1px solid rgba(255, 255, 255, 0.06);
+    1px solid rgba(255, 255, 255, 0.12);
 
   border-radius: 8px;
 }
@@ -495,7 +495,7 @@
 
   gap: 10px;
 
-  color: #cbd5e1;
+  color: #e2e8f0;
 
   font-size: 0.85rem;
 }
@@ -568,10 +568,10 @@
   padding: 13px 15px;
 
   background:
-    rgba(15, 23, 42, 0.55);
+    rgba(30, 41, 59, 0.65);
 
   border:
-    1px solid rgba(255, 255, 255, 0.06);
+    1px solid rgba(255, 255, 255, 0.12);
 
   border-radius: 8px;
 }
@@ -598,7 +598,7 @@
 
 
 .recent-mission-id {
-  color: #475569;
+  color: #7c8ba3;
 
   font-family: monospace;
 
@@ -613,7 +613,7 @@
 
   margin-top: 8px;
 
-  color: #64748b;
+  color: #93a4bd;
 
   font-size: 0.7rem;
 }
@@ -655,7 +655,7 @@
 
   text-align: center;
 
-  color: #475569;
+  color: #7c8ba3;
 
   font-family: monospace;
 
@@ -683,15 +683,15 @@
   gap: 25px;
 
   background:
-    rgba(3, 20, 35, 0.8);
+    rgba(8, 28, 48, 0.85);
 
   border:
-    1px solid rgba(125, 211, 252, 0.35);
+    1px solid rgba(125, 211, 252, 0.5);
 
   border-radius: 12px;
 
   box-shadow:
-    0 0 30px rgba(0, 140, 255, 0.1);
+    0 0 30px rgba(0, 140, 255, 0.12);
 }
 
 
@@ -707,7 +707,7 @@
 .launch-panel p {
   margin: 0;
 
-  color: #64748b;
+  color: #93a4bd;
 
   font-size: 0.8rem;
 }
@@ -719,12 +719,12 @@
   padding: 13px 22px;
 
   border:
-    1px solid rgba(125, 211, 252, 0.6);
+    1px solid rgba(125, 211, 252, 0.7);
 
   border-radius: 8px;
 
   background:
-    rgba(8, 72, 100, 0.65);
+    rgba(14, 95, 130, 0.75);
 
   color: #ffffff;
 
@@ -745,7 +745,7 @@
   transform: translateY(-2px);
 
   background:
-    rgba(8, 100, 140, 0.8);
+    rgba(14, 120, 165, 0.85);
 
   border-color:
     rgba(125, 211, 252, 0.95);

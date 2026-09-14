@@ -1,0 +1,46 @@
+.go-back-btn {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  z-index: 1000;
+
+  padding: 0.6rem 1.2rem;
+
+  background: rgba(3, 8, 18, 0.9);
+
+  border: 2px solid rgba(244, 194, 224, 0.5);
+  border-radius: 8px;
+
+  color: #f9c9e6;
+
+  font-family: 'Pixelify Sans Variable', system-ui;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+
+  cursor: pointer;
+
+  image-rendering: pixelated;
+
+  box-shadow:
+    0.15rem 0.15rem 0 0 rgba(244, 194, 224, 0.35);
+
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.1s ease;
+}
+
+.go-back-btn:hover {
+  border-color: rgba(244, 194, 224, 0.9);
+  color: #ffe0f2;
+
+  box-shadow:
+    0.2rem 0.2rem 0 0 rgba(244, 194, 224, 0.5);
+}
+
+.go-back-btn:active {
+  transform: translate(0.15rem, 0.15rem);
+
+  box-shadow: none;
+}

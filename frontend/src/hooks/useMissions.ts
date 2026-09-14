@@ -66,7 +66,7 @@ export function useMissions() {
     const response  = await fetch(`${API_URL}/api/missions/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json"},
-      body: JSON.stringify({...mission, status}),
+      body: JSON.stringify({...mission, status}), //spreads every property from mission to new object, overwrites original mission status with the new one
     
   });
   if (!response.ok) throw new Error(`API returned ${response.status}`);

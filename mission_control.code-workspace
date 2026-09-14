@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "mission_control",
+			"path": "."
+		},
+		{
+			"name": "Mission Control API",
+			"path": "../../bruno/Mission Control API"
+		}
+	],
+	"settings": {}
+}
