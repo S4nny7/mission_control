@@ -86,7 +86,7 @@ function App() {
               <section className="mission-form-section">
                 <MissionForm
                   title="Launch New Mission"
-                  submitLabel="🚀 Launch Mission"
+                  submitLabel="⟡ Launch Mission"
                   priorities={["Low", "Medium", "High", "Critical"]}
                   statuses={["Planned", "Active", "Completed", "Aborted"]}
                   onSubmit={async (data) => {
